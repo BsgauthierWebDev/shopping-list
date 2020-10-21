@@ -2,9 +2,9 @@
 //Function to remove deleted items from the list
 $(function() {
     //This SHOULD delete the <li> associated with the delete button
-    // $("button.shopping-item-delete").click(function() {
-    //     $(this).closest('li').remove();
-    // })
+    $("button.shopping-item-delete").click(function() {
+        $(this).closest('li').remove();
+    })
 //})
 //Function to cross items off - Create function to change the class of the item
 //$(function() {
