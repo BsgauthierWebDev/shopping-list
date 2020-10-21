@@ -9,6 +9,7 @@ $(function() {
 //Function to cross items off - Create function to change the class of the item
 //$(function() {
     $("button.shopping-item-toggle").click(function() {
+        function.preventDefault();
         $(this).closest('li').addClass('shoppingItem_checked');
     })
 
