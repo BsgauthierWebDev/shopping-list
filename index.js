@@ -13,7 +13,7 @@
     event.preventDefault();
     $("button.shopping-item-toggle").click(function() {
         //This adds the class "shoppingItem_checked", which should add a strikethrough to the associated text.
-        $(this).closest('li').addClass('shoppingItem_checked');
+        $(this).closest('li').toggleClass('shoppingItem shoppingItem_checked');
     })
 
 //Tell jQuery to add a new element for the added item
