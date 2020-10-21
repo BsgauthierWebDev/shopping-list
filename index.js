@@ -18,20 +18,21 @@ $(function() {
           </button>
         </div>
       </li>`)
+    }
+);
 
-    $("body").on('click', ".shopping-item-toggle",function(){
-    //console.log($(this));
-        let itemText = $(this).parents("li").find(".shopping-item").toggleClass("shopping-item__checked");
-    //console.log(itemText);
-    //$(itemText).toggleClass("shopping-item__checked")
-    //console.log("check");
-    });
+//This is the function to cross items off the list
+//Traverses the page for the correct click item
+$("body").on('click', ".shopping-item-toggle",function(){
+    //Finds the particular <li> associated with the "click" button
+    //and toggles the class to "shopping-item_checked"
+    let itemText = $(this).parents("li").find(".shopping-item").toggleClass("shopping-item__checked");
+});
 
     $("body").on("click", ".shopping-item-delete", function() {
         let itemText = $(this).parents("li").remove("li");
     })
-}
-);
+
 
 
 
