@@ -3,6 +3,8 @@
 $(function() {
     //This SHOULD delete the <li> associated with the delete button
     $("button.shopping-item-delete").click(function() {
+        function.preventDefault();
+        //Using the "closest" modifyer should select the object in the same area as the button
         $(this).closest('li').remove();
     })
 //})
@@ -10,15 +12,18 @@ $(function() {
 //$(function() {
     $("button.shopping-item-toggle").click(function() {
         function.preventDefault();
+        //This adds the class "shoppingItem_checked", which should add a strikethrough to the associated text.
         $(this).closest('li').addClass('shoppingItem_checked');
     })
 
 //Tell jQuery to add a new element for the added item
-    // $('#js-shopping-list-form button') {
-    //     $('#shopping-list-entry').val()
-    //     {$('ul').append($('<div>').html(''))
-    // }
-    // }
+    $('#js-shopping-list-form button') {
+         event.preventDefault();
+        $('#shopping-list-entry').val()
+    //      Takes the value of the text entered into the box and adds it as a new line item in the unorganized list
+        {$('ul').append($('<div>').html(''))
+    }
+    }
 }
 )
 
