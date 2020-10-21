@@ -29,5 +29,21 @@ function checkItem(itemName) {
 
 //Remove item from list
 function deleteItem(itemName) {
-
+    $(".shopping-list").remove(
+        //The following was copied from the HTML 
+        //to make sure all aspects of the code 
+        //were properly imported for the new item
+        `<li>
+        <span class="shopping-item">${item-name}</span>
+        <div class="shopping-item-controls">
+          <button class="shopping-item-toggle">
+            <span class="button-label">check</span>
+          </button>
+          <button class="shopping-item-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>`);
+    )
+}
 }
