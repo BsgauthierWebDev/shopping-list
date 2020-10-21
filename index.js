@@ -1,6 +1,6 @@
-//Add item to shopping list
-function addItem(itemName) {
-    //This adds the item input to the list
+//All actions can be housed in the same base function.
+//Function to remove deleted items from the list
+$(function() {
     $(".shopping-list").append(
         //The following was copied from the HTML 
         //to make sure all aspects of the code 
@@ -17,25 +17,23 @@ function addItem(itemName) {
             <span class="button-label">delete</span>
           </button>
         </div>
-      </li>`);
-    )
-}
+      </li>`)
 
-//Cross item off list
-function checkItem(itemName) {
-    //Throughout the body of the page, when the "check" button is clicked
-    $("body").on("click", ".shopping-item-toggle", function() {
-        //the text for this line item is found on the page
-        let itemText = $(this).parents("li").find
-        //and the class of the item is changed to show as strikethrough
-        ("shopping-item").toggleClass("shopping-item_checked");
-    })
-}
+    $("body").on('click', ".shopping-item-toggle",function(){
+    //console.log($(this));
+        let itemText = $(this).parents("li").find(".shopping-item").toggleClass("shopping-item__checked");
+    //console.log(itemText);
+    //$(itemText).toggleClass("shopping-item__checked")
+    //console.log("check");
+    });
 
-//Remove item from list
-function deleteItem(itemName) {
     $("body").on("click", ".shopping-item-delete", function() {
-        let itemText = $(this).parents("li").remove
-        ("li");
+        let itemText = $(this).parents("li").remove("li");
     })
 }
+);
+
+
+
+
+
