@@ -1,15 +1,4 @@
-//Function to add an item to the list
-//$(function() {
-//    $('js.form').submit(event => {
-//        event.preventDefault();
-//        const userTextElement = $(event.currentTarget).find('#shopping-list-entry);
-//        $("js-display-shopping-list-text").text(`user text is: ${userTextElement.val()}`);
-//        userTextElement.val("");
-//    })
-//}
-//)
-
-
+//All actions can be housed in the same base function.
 //Function to remove deleted items from the list
 $(function() {
     //This SHOULD delete the <li> associated with the delete button
@@ -22,14 +11,15 @@ $(function() {
     $("button.shopping-item-toggle").click(function() {
         $(this).closest('li').addClass('shoppingItem_checked');
     })
-}
-)
+
 //Tell jQuery to add a new element for the added item
     $('#js-shopping-list-form button') {
         $('#shopping-list-entry').val()
         {$('ul').append($('<div>').html(''))
     }
     }
+}
+)
 
 
 
