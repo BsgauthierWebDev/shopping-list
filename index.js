@@ -14,7 +14,7 @@ function addItem(itemName){
           </button>
         </div>
       </li>`
-    )
+    );
 }
 
 //This traverses the page, looking for entered text in the box
