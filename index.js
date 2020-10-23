@@ -46,7 +46,7 @@ function addItem(itemName){
     //Traverses the shopping list, when "check" button is clicked
     $('.shopping-list').on('click', '.shopping-item-toggle',function(event) {
         //The class for the item will be toggled to "shopping-item_checked"
-        $(this).closest('shopping-item-controls').siblings('.shopping-item').toggleClass('shopping-item_checked')
+        $(this).closest('shopping-item').toggleClass('shopping-item_checked')
     })
 
     //Code to delete an item from the shopping list
