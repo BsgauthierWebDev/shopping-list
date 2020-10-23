@@ -47,7 +47,7 @@ function addItem(itemName){
     $(".shopping-list").on("click", ".shopping-item-toggle",function(event) {
         //The class for the item will be toggled to "shopping-item_checked"
         $(this).closest("shopping-item-controls").siblings(".shopping-item").toggleClass("shopping-item_checked")
-    });
+    })
 
     //Code to delete an item from the shopping list
     //Traverses the shopping list, when "delete" button is clicked
@@ -55,4 +55,4 @@ function addItem(itemName){
         //The entire associated line item is removed from the list
         $(this).closest("li").remove()
     }
-    );
+    )
