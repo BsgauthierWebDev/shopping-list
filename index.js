@@ -1,5 +1,19 @@
 //Function to add an item to the shopping list
 function addItem(itemName){
+    //This traverses the page, looking for entered text in the box
+    //(shopping-list-form) and creates a new shopping list itemName
+    //to append using the above function
+    $("#js-shopping-list-form").submit(function(event) {
+        //This prevents the page from submitting a form to the server
+            event.preventDefault();
+        //This applies the input text to the itemName variable
+            let itemName = $(this).find(".shopping-list-entry")[0].value;
+        //This calls the itemName
+            console.log(itemName);
+        //This adds the itemName to the list
+            addItem(itemName);
+        });
+        
     //Takes the itemName and adds it to the bottom of the list
     $(".shopping-list").append(
     `<li>
@@ -15,19 +29,6 @@ function addItem(itemName){
         </li>`);
     }
         
-    //This traverses the page, looking for entered text in the box
-    //(shopping-list-form) and creates a new shopping list itemName
-    //to append using the above function
-    $("#js-shopping-list-form").submit(function(event) {
-    //This prevents the page from submitting a form to the server
-        event.preventDefault();
-    //This applies the input text to the itemName variable
-        let itemName = $(this).find(".shopping-list-entry")[0].value;
-    //This calls the itemName
-        console.log(itemName);
-    //This adds the itemName to the list
-        addItem(itemName);
-    });
     
     //This traverses the page looking for the "shopping-item-toggle" button clicked
     $("body").on("click", ".shopping-item-toggle", function(){
@@ -46,7 +47,7 @@ function addItem(itemName){
     //Traverses the shopping list, when "check" button is clicked
     //$('.shopping-list').on('click', '.shopping-item-toggle',function(event) {
         //The class for the item will be toggled to "shopping-item_checked"
-        $(this).closest('shopping-item-controls').siblings('.shopping-item').toggleClass('shopping-item_checked')
+        //$(this).closest('shopping-item-controls').siblings('.shopping-item').toggleClass('shopping-item_checked')
     //})
 
     //Code to delete an item from the shopping list
