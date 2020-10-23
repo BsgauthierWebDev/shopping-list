@@ -22,7 +22,7 @@ function addItem(itemName){
     //This prevents the page from submitting a form to the server
         event.preventDefault();
     //This applies the input text to the itemName variable
-        let itemName = $(".shopping-list-entry").val("");
+        let itemName = $(this).find(".shopping-list-entry").val("");
     //This calls the itemName
         console.log(itemName);
     //This adds the itemName to the list
@@ -30,11 +30,11 @@ function addItem(itemName){
     });
     
     //This traverses the page looking for the "shopping-item-toggle" button clicked
-    //$("body").on("click", ".shopping-item-toggle", function(){
+    $("body").on("click", ".shopping-item-toggle", function(){
     //This determines which list item had the button clicked and 
     //toggles the class to "shopping-item_checked" to cross it off
-    //    let itemText = $(this).parents("li").find(".shopping-item").toggleClass("shopping-item_checked");
-    //});
+        let itemText = $(this).parents("li").find(".shopping-item").toggleClass("shopping-item_checked");
+    });
 
     //This performs the same task as the first have of the above function
     //$("body").on("click", "shopping-item-delete", function(){
@@ -44,10 +44,10 @@ function addItem(itemName){
 
     //Code to toggle the "shopping-item-toggle" and cross off items
     //Traverses the shopping list, when "check" button is clicked
-    $('.shopping-list').on('click', '.shopping-item-toggle',function(event) {
+    //$('.shopping-list').on('click', '.shopping-item-toggle',function(event) {
         //The class for the item will be toggled to "shopping-item_checked"
-        $(this).closest('shopping-item').toggleClass('shopping-item_checked')
-    })
+        $(this).closest('shopping-item-controls').siblings('.shopping-item').toggleClass('shopping-item_checked')
+    //})
 
     //Code to delete an item from the shopping list
     //Traverses the shopping list, when "delete" button is clicked
