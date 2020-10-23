@@ -22,7 +22,7 @@ function addItem(itemName){
     //This prevents the page from submitting a form to the server
         event.preventDefault();
     //This applies the input text to the itemName variable
-        let itemName = $(this).find(".shopping-list-entry").val("");
+        let itemName = $(this).find(".shopping-list-entry")[0].value;
     //This calls the itemName
         console.log(itemName);
     //This adds the itemName to the list
